@@ -12,7 +12,7 @@ function Experience() {
       <ul>
         <li>Native: Ukrainian</li>
         <li>English (B2 level)</li>
-        <li>Japan (A1 level)</li>
+        <li>Japanese (A1 level)</li>
       </ul>
     </section>
   );
