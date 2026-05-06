@@ -5,73 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Concise resume about me"/>
     <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>My resume</h1>
-        <nav>
-            <ol>
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">General experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact-info">Contact information</a></li>
-            </ol>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2 id="about-me">About me</h2>
-            <p>My name is Max. I'm Young student, who has wide experience and great potential. Fast
-learner, who can quickly acquire the essential knowledge, ability to use
-programs and services An energetic individual with a strong desire to
-become part of a team and contribute to your company.</p>
-        </section>
-        <section>
-            <h2 id="education">Education</h2>
-            <h3>NATIONAL UNIVERSITY LVIV POLYTECHNIC. <br> 2023 - Up to now</h3>
-            <p>Department of information protection. Institute of Computer technologies, automation and metrology. Bachelor of cyber security.</p>
-        </section>
-        <section>
-            <h2 id="experience">General experience</h2>
-            <h3>Job</h3>
-            <p>Plotter cutting specialist (2 month). Talked to customers, took orders.</p>
-            <h3>Marathons</h3>
-            <p>Passed programming marathons from the <b>GoIT</b> company.</p>
-            <h3>Volunteer work</h3>
-            <p>Participated in weaving nets for the military.</p>
-            <h3>Languages</h3>
-            <ul>
-                <li>Native: Ukrainian</li>
-                <li>English (B2 level)</li>
-                <li>Japan (A1 level)</li>
-            </ul>
-        </section>
-        <section>
-            <h2 id="skills">Skills</h2>
-            <h3>Soft skills</h3>
-            <ul>
-                <li>Teamwork</li>
-                <li>Leadership</li>
-                <li>Concentration</li>
-                <li>Preciseness</li>
-                <li>Fast-learner</li>
-            </ul>
-            <h3>Hard skills</h3>
-            <ul>
-                <li>Programming: Python, C, C#, PhP, JavaSript, HTML, CSS</li>
-                <li>Web Security: CORS testing, XSS prevention, SQL Injection detection</li>
-                <li>Tools: Git, PyCharm, VS Code, Wireshark, nmap, Figma</li>
-            </ul>
-            <p></p>
-        </section>
-    </main>
-    <footer>
-        <address id="contact-info">
-            <h2>Contact information</h2>
-            <p>Phone: <a href="tel:+000000000000">(+000)00-000-00-00</a></p>
-            <p>Email: <a href="mailto:fake@gmail.com">fake@gmail.com</a></p>
-        </address>
-    </footer>
+    <div class="app-container">
+        <header>
+            <h1>My resume</h1>
+            <nav>
+                <ol>
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">General experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact-info">Contact information</a></li>
+                </ol>
+            </nav>
+            <button id="themeToggle" class="theme-btn">Theme</button>
+        </header>
+        <main>
+            <section>
+                <h2 id="about-me">About me</h2>
+                <p>My name is Max. I'm Young student, who has wide experience and great potential. Fast
+                learner, who can quickly acquire the essential knowledge, ability to use
+                programs and services An energetic individual with a strong desire to
+                become part of a team and contribute to your company.</p>
+            </section>
+            
+            <section>
+                <h2 id="education">Education</h2>
+                <h3>NATIONAL UNIVERSITY LVIV POLYTECHNIC. <br> 2023 - Up to now</h3>
+                <p>Department of information protection. Institute of Computer technologies, automation and metrology. Bachelor of cyber security.</p>
+            </section>
+            
+            <section>
+                <h2 id="experience">General experience</h2>
+                <h3>Job</h3>
+                <p>Plotter cutting specialist (2 month). Talked to customers, took orders.</p>
+                <h3>Marathons</h3>
+                <p>Passed programming marathons from the <b>GoIT</b> company.</p>
+                <h3>Volunteer work</h3>
+                <p>Participated in weaving nets for the military.</p>
+                <h3>Languages</h3>
+                <ul>
+                    <li>Native: Ukrainian</li>
+                    <li>English (B2 level)</li>
+                    <li>Japan (A1 level)</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2 id="skills">Skills</h2>
+                <h3>Soft skills</h3>
+                <ul>
+                    <li>Teamwork</li>
+                    <li>Leadership</li>
+                    <li>Concentration</li>
+                    <li>Preciseness</li>
+                    <li>Fast-learner</li>
+                </ul>
+                <h3>Hard skills</h3>
+                <ul>
+                    <li>Programming: Python, C, C#, PhP, JavaSript, HTML, CSS</li>
+                    <li>Web Security: CORS testing, XSS prevention, SQL Injection detection</li>
+                    <li>Tools: Git, PyCharm, VS Code, Wireshark, nmap, Figma</li>
+                </ul>
+            </section>
+            <!-- comments section -->
+            <section>
+                <h2 id="reviews">Employer's comments</h2>
+                <div id="commentsContainer" class="comments-list">
+                    <p>Loading comments...</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <address id="contact-info">
+                <h2>Contact information</h2>
+                <p>Phone: <a href="tel:+000000000000">(+000)00-000-00-00</a></p>
+                <p>Email: <a href="mailto:fake@gmail.com">fake@gmail.com</a></p>
+            </address>
+            <div id="system-info" class="system-info"></div>
+        </footer>
+    </div>
+    <!-- form -->
+     <div id="feedbackModal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="closeModal" class="close-btn">&times;</button>
+            <h2 style="color: #1d4ed8; margin-bottom: 10px;">Feedback</h2>
+            <p style="margin-bottom: 20px; font-size: 14px; color: #64748b;">You have been on the site for 1 minute! Please leave your contacts.</p>
+            
+            <form action="https://formspree.io/f/xlgzljqe" method="POST" class="feedback-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
