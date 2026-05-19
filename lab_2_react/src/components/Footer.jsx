@@ -32,7 +32,7 @@ function Footer() {
           <p className="flex items-center justify-center gap-2">
             <span className="text-slate-400">Email:</span> 
             <a href="mailto:fake@gmail.com" className="text-blue-400 hover:text-blue-300 hover:underline underline-offset-4 transition-colors">
-              fake@gmail.com
+              test@gmail.com
             </a>
           </p>
         </div>
