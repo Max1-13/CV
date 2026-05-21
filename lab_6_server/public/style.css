@@ -1,0 +1,338 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 135px;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d4ed8;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+header nav ol {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+/* Sections */
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #1d4ed8;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+section h3 {
+    color: #334155;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section p { margin-bottom: 15px; }
+section ul { padding-left: 20px; margin-top: 10px; }
+section ul li { margin-bottom: 8px; }
+
+/* Footer */
+footer {
+    background-color: #3661a4;
+    color: #f8fafc;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+footer address { font-style: normal; }
+footer h2 { font-size: 24px; margin-bottom: 20px; }
+footer p { margin-bottom: 10px; font-size: 16px; }
+footer a { color: #60a5fa; }
+footer a:hover { color: #93c5fd; }
+
+/* System information block */
+.system-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Comments section */
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-card {
+    background-color: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.comment-card h4 {
+    color: #1d4ed8;
+    margin-bottom: 5px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.comment-card .email {
+    font-size: 12px;
+    color: #64748b;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* form style */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active {
+    display: flex; 
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    color: #64748b;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.close-btn:hover { 
+    color: #ef4444; 
+    transform: scale(1.1); 
+}
+
+body.dark-mode .close-btn {
+    color: #94a3b8;
+}
+
+body.dark-mode .close-btn:hover {
+    color: #f87171;
+}
+
+
+.feedback-form .form-group { margin-bottom: 15px; }
+.feedback-form label { display: block; margin-bottom: 5px; font-weight: 500; font-size: 14px; }
+.feedback-form input, .feedback-form textarea {
+    width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;
+}
+.feedback-form .submit-btn {
+    width: 100%; 
+    background-color: #1d4ed8; 
+    color: white; 
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px; 
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-form .submit-btn:hover { 
+    background-color: #1e40af; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(29, 78, 216, 0.3);
+}
+
+.feedback-form .submit-btn:active {
+    transform: translateY(0);
+}
+
+/* dark theme */
+
+.theme-btn {
+    background-color: #ffffff;
+    color: #1d4ed8;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background-color: #f8fafc;
+    border-color: #93c5fd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.theme-btn:active {
+    transform: translateY(0);
+}
+
+body.dark-mode {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+body.dark-mode section {
+    background-color: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode section h2 {
+    color: #60a5fa;
+    border-bottom-color: #334155;
+}
+
+body.dark-mode section h3 {
+    color: #cbd5e1;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+}
+
+body.dark-mode .theme-btn {
+    background-color: #334155;
+    color: #60a5fa;
+    border: 1px solid #60a5fa;
+}
+
+body.dark-mode .theme-btn:hover {
+    background-color: #475569;
+}
+
+body.dark-mode .comment-card {
+    background-color: #334155;
+    border-color: #475569;
+}
+
+body.dark-mode .comment-card h4 {
+    color: #93c5fd;
+}
+
+body.dark-mode .modal-content {
+    background: #1e293b;
+    border: 1px solid #475569;
+    color: #f1f5f9;
+}
+
+body.dark-mode .modal-content h2 {
+    color: #60a5fa !important;
+}
+
+body.dark-mode .feedback-form input,
+body.dark-mode .feedback-form textarea {
+    background-color: #334155;
+    border-color: #475569;
+    color: white;
+}
+
+/* Screen adaptivity */
+@media (max-width: 600px) {
+    html { scroll-padding-top: 220px; }
+    header { flex-direction: column; text-align: center; padding: 20px; }
+    header nav ol { flex-direction: column; gap: 10px; margin-top: 15px; margin-bottom: 15px;}
+}
+
+
+
